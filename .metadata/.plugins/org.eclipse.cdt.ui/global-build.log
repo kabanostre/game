@@ -1,0 +1,97 @@
+
+**** Build of configuration Debug for project kostki ****
+
+make all 
+Building file: /home/stryku/Desktop/projekt/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "/home/stryku/Desktop/projekt/main.c"
+/home/stryku/Desktop/projekt/main.c: In function ‘rzut’:
+/home/stryku/Desktop/projekt/main.c:18:12: warning: return makes integer from pointer without a cast [-Wint-conversion]
+     return wynik;
+            ^
+/home/stryku/Desktop/projekt/main.c: In function ‘punktacja’:
+/home/stryku/Desktop/projekt/main.c:64:11: warning: variable ‘j’ set but not used [-Wunused-but-set-variable]
+     int i,j;
+           ^
+/home/stryku/Desktop/projekt/main.c: In function ‘main’:
+/home/stryku/Desktop/projekt/main.c:222:9: warning: unused variable ‘wygrana’ [-Wunused-variable]
+     int wygrana;
+         ^
+/home/stryku/Desktop/projekt/main.c:218:9: warning: variable ‘gracz1’ set but not used [-Wunused-but-set-variable]
+     int gracz1 = 0,ilegraczy,i,n,r=1;
+         ^
+/home/stryku/Desktop/projekt/main.c:216:18: warning: unused variable ‘koniec’ [-Wunused-variable]
+Finished building: /home/stryku/Desktop/projekt/main.c
+     int wynik[5],koniec,punkty;
+                  ^
+ 
+Building target: kostki
+/home/stryku/Desktop/projekt/main.c:247:43: warning: ‘punkty’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+Invoking: GCC C Linker
+gcc  -o "kostki"  ./main.o   
+                     gracz[0] = gracz[0] + punktacja(wynik,punkty);
+                                           ^
+Finished building target: kostki
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kostki ****
+
+make all 
+Building file: /home/stryku/Desktop/projekt/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "/home/stryku/Desktop/projekt/main.c"
+In file included from /usr/include/allegro5/platform/astdbool.h:23:0,
+                 from /usr/include/allegro5/internal/alconfig.h:52,
+                 from /usr/include/allegro5/base.h:50,
+                 from /usr/include/allegro5/allegro.h:26,
+                 from /home/stryku/Desktop/projekt/main.c:5:
+/home/stryku/Desktop/projekt/main.c:9:36: error: expected ‘;’, identifier or ‘(’ before ‘_Bool’
+ typedef enum {TRUE = 1, FALSE = 0} bool;
+                                    ^
+/home/stryku/Desktop/projekt/main.c:14:77: error: expected ‘;’, ‘,’ or ‘)’ before ‘=’ token
+subdir.mk:18: recipe for target 'main.o' failed
+ void rysuj_kostke(ALLEGRO_BITMAP  *obrazy_kostek[], int nr, bool zaznaczona = FALSE)
+                                                                             ^
+/home/stryku/Desktop/projekt/main.c: In function ‘pobierz_klawisz’:
+/home/stryku/Desktop/projekt/main.c:34:21: error: ‘event_queue’ undeclared (first use in this function)
+   al_wait_for_event(event_queue, *ev);
+                     ^
+/home/stryku/Desktop/projekt/main.c:34:21: note: each undeclared identifier is reported only once for each function it appears in
+/home/stryku/Desktop/projekt/main.c:34:34: error: incompatible type for argument 2 of ‘al_wait_for_event’
+   al_wait_for_event(event_queue, *ev);
+                                  ^
+In file included from /usr/include/allegro5/base.h:50:0,
+                 from /usr/include/allegro5/allegro.h:26,
+                 from /home/stryku/Desktop/projekt/main.c:5:
+/usr/include/allegro5/events.h:226:1: note: expected ‘ALLEGRO_EVENT * {aka union ALLEGRO_EVENT *}’ but argument is of type ‘ALLEGRO_EVENT {aka union ALLEGRO_EVENT}’
+ AL_FUNC(void, al_wait_for_event, (ALLEGRO_EVENT_QUEUE*,
+ ^
+/home/stryku/Desktop/projekt/main.c: In function ‘rzut’:
+/home/stryku/Desktop/projekt/main.c:54:12: warning: return makes integer from pointer without a cast [-Wint-conversion]
+     return wynik;
+            ^
+/home/stryku/Desktop/projekt/main.c: In function ‘punktacja’:
+/home/stryku/Desktop/projekt/main.c:100:11: warning: variable ‘j’ set but not used [-Wunused-but-set-variable]
+     int i,j;
+           ^
+/home/stryku/Desktop/projekt/main.c: In function ‘main’:
+/home/stryku/Desktop/projekt/main.c:278:9: warning: unused variable ‘wygrana’ [-Wunused-variable]
+     int wygrana;
+         ^
+/home/stryku/Desktop/projekt/main.c:274:9: warning: variable ‘gracz1’ set but not used [-Wunused-but-set-variable]
+     int gracz1 = 0,ilegraczy,i,n,r=1;
+         ^
+/home/stryku/Desktop/projekt/main.c:272:18: warning: unused variable ‘koniec’ [-Wunused-variable]
+     int wynik[5],koniec,punkty;
+                  ^
+/home/stryku/Desktop/projekt/main.c:269:19: warning: unused variable ‘obrazy_kostek’ [-Wunused-variable]
+  ALLEGRO_BITMAP  *obrazy_kostek[6];
+                   ^
+/home/stryku/Desktop/projekt/main.c:268:19: warning: unused variable ‘display’ [-Wunused-variable]
+  ALLEGRO_DISPLAY *display = al_create_display(800,600);
+                   ^
+make: *** [main.o] Error 1
+
+**** Build Finished ****
